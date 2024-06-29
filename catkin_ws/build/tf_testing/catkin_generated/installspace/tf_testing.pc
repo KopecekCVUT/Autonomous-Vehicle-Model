@@ -1,0 +1,8 @@
+prefix=/home/vehicle/catkin_ws/install
+
+Name: tf_testing
+Description: Description of tf_testing
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

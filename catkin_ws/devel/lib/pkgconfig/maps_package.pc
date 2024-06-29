@@ -1,0 +1,8 @@
+prefix=/home/vehicle/catkin_ws/devel
+
+Name: maps_package
+Description: Description of maps_package
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

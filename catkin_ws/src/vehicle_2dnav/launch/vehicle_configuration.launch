@@ -1,0 +1,18 @@
+<launch>
+
+     <master auto="start"/>
+ <!-- Run the map server --> 
+   <node name="map_server" pkg="map_server" type="map_server" args="$( find vehicle_2dnav)/map/obyvak_new.yaml"/>
+   <param name="robot_description" textfile="$(find vehicle_model)/urdf/vehicle.urdf"/>
+   <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher"/>
+   <node pkg="joint_state_publisher" type="joint_state_publisher" name="joint_state_publisher"/>
+   <arg name="rviz_config_file" default="$(find vehicle_2dnav)/config/rviz.rviz"/>
+   	
+   <include file="$(find rplidar_ros)/launch/rplidar_a2m8.launch" />
+   <node pkg="rviz" type="rviz" name="rviz"  args="-d $(arg rviz_config_file)"/>
+    <node pkg="tf" type="static_transform_publisher" name="base_to_laser_broadcaster" args="0.065 0 0.117 3.141592 0 0 base_link laser 100"/>
+    
+   <node pkg="odometry" type="odometry_publisher.py" name="odom_publisher" output="screen" />
+   
+   
+</launch> 

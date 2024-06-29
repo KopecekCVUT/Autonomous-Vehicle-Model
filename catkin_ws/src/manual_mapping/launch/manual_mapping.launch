@@ -1,0 +1,11 @@
+<launch>
+    <!-- Spusteni teleop_twist_keyboard -->
+    <node pkg="teleop_twist_keyboard" type="teleop_twist_keyboard.py" name="teleop_twist_keyboard_node" output="screen" />
+
+    <!-- Spusteni controller -->
+    <node pkg="motor_controller" type="controller.py" name="controller_node" output="screen" />
+    <include file="$(find rplidar_ros)/launch/rplidar_a2m8.launch" />
+    <include file="$(find hector_slam_launch)/launch/tutorial.launch" />
+
+</launch>
+

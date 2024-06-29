@@ -1,0 +1,7 @@
+<launch>
+	<param name="robot_description" textfile="$(find vehicle_model)/urdf/vehicle.urdf"/>
+   	<node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher"/>
+   	<node pkg="joint_state_publisher" type="joint_state_publisher" name="joint_state_publisher"/>
+   	<arg name="rviz_config_file" default="$(find vehicle_2dnav)/config/bag.rviz"/>
+	<node pkg="rviz" type="rviz" name="rviz"  args="-d $(arg rviz_config_file)"/>
+</launch>

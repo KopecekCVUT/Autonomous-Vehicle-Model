@@ -1,0 +1,14 @@
+{
+    "python.autoComplete.extraPaths": [
+        "/home/vehicle/catkin_ws/devel/lib/python3/dist-packages",
+        "/opt/ros/noetic/lib/python3/dist-packages",
+        "/usr/local/lib",
+        "/usr/local/lib/python3.6/pyrealsense2"
+    ],
+    "python.analysis.extraPaths": [
+        "/home/vehicle/catkin_ws/devel/lib/python3/dist-packages",
+        "/opt/ros/noetic/lib/python3/dist-packages",
+        "/usr/local/lib",
+        "/usr/local/lib/python3.6/pyrealsense2"
+    ]
+}

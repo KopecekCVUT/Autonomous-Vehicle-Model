@@ -1,0 +1,8 @@
+<launch>
+    <!-- Spusteni teleop_twist_keyboard -->
+    <node pkg="motor_controller" type="demo.py" name="demo" output="screen" />
+
+    <!-- Spusteni controller -->
+    <node pkg="motor_controller" type="controller.py" name="controller_node" output="screen" />
+
+</launch>

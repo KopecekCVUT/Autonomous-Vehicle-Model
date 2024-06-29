@@ -1,0 +1,13 @@
+digraph G {
+"odom" -> "base_link"[label="Broadcaster: /odometry.py\nAverage rate: 100.203 Hz\nMost recent transform: 1715618333.748 ( 0.004 sec old)\nBuffer length: 4.960 sec\n"];
+"map" -> "odom"[label="Broadcaster: /amcl\nAverage rate: 13.806 Hz\nMost recent transform: 1715618333.753 ( -0.001 sec old)\nBuffer length: 4.925 sec\n"];
+"base_link" -> "laser"[label="Broadcaster: /base_to_laser_broadcaster\nAverage rate: 10.188 Hz\nMost recent transform: 1715618333.828 ( -0.077 sec old)\nBuffer length: 4.908 sec\n"];
+"base_link" -> "left_front_wheel"[label="Broadcaster: /robot_state_publisher\nAverage rate: 10.204 Hz\nMost recent transform: 1715618333.748 ( 0.003 sec old)\nBuffer length: 4.900 sec\n"];
+"base_link" -> "left_rear_wheel"[label="Broadcaster: /robot_state_publisher\nAverage rate: 10.204 Hz\nMost recent transform: 1715618333.748 ( 0.003 sec old)\nBuffer length: 4.900 sec\n"];
+"base_link" -> "right_front_wheel"[label="Broadcaster: /robot_state_publisher\nAverage rate: 10.204 Hz\nMost recent transform: 1715618333.748 ( 0.003 sec old)\nBuffer length: 4.900 sec\n"];
+"base_link" -> "right_rear_wheel"[label="Broadcaster: /robot_state_publisher\nAverage rate: 10.204 Hz\nMost recent transform: 1715618333.748 ( 0.003 sec old)\nBuffer length: 4.900 sec\n"];
+edge [style=invis];
+ subgraph cluster_legend { style=bold; color=black; label ="view_frames Result";
+"Recorded at time: 1715618333.752"[ shape=plaintext ] ;
+ }->"map";
+}

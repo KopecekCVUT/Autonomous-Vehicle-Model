@@ -1,0 +1,8 @@
+prefix=/home/vehicle/catkin_ws/install
+
+Name: manual_mapping
+Description: Description of manual_mapping
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
